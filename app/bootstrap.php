@@ -2,7 +2,13 @@
 
 require_once '../vendor/autoload.php';
 
-$container = new \Slim\Container;
+$configuration = [
+    'settings' => [
+        'displayErrorDetails' => true,
+    ],
+];
+
+$container = new \Slim\Container($configuration);
 
 $container['config'] = function($c) {
 	return new \Noodlehaus\Config('../config/app.php');
@@ -25,6 +31,10 @@ $container['db'] = function($c) {
 		$c->config->get('db.mysql.username'),
 		$c->config->get('db.mysql.password')
 	);
+};
+
+$container['mail'] = function($c) {
+	return new \Mailgun\Mailgun($c->config->get('services.mailgun.secret'));
 };
 
 $app = new \Slim\App($container);

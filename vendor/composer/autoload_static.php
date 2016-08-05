@@ -13,6 +13,7 @@ class ComposerStaticInitff9eaf7fb84a23fc43fad608409bc9c9
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Symfony\\Component\\EventDispatcher\\' => 34,
             'Slim\\Views\\' => 11,
             'Slim\\' => 5,
         ),
@@ -35,6 +36,10 @@ class ComposerStaticInitff9eaf7fb84a23fc43fad608409bc9c9
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Component\\EventDispatcher\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
+        ),
         'Slim\\Views\\' => 
         array (
             0 => __DIR__ . '/..' . '/slim/twig-view/src',
@@ -74,6 +79,28 @@ class ComposerStaticInitff9eaf7fb84a23fc43fad608409bc9c9
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+        ),
+        'M' => 
+        array (
+            'Mailgun\\Tests' => 
+            array (
+                0 => __DIR__ . '/..' . '/mailgun/mailgun-php/tests',
+            ),
+            'Mailgun' => 
+            array (
+                0 => __DIR__ . '/..' . '/mailgun/mailgun-php/src',
+            ),
+        ),
+        'G' => 
+        array (
+            'Guzzle\\Tests' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/tests',
+            ),
+            'Guzzle' => 
+            array (
+                0 => __DIR__ . '/..' . '/guzzle/guzzle/src',
             ),
         ),
     );
