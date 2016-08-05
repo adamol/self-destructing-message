@@ -19,6 +19,10 @@ class ComposerStaticInitff9eaf7fb84a23fc43fad608409bc9c9
         array (
             'Psr\\Http\\Message\\' => 17,
         ),
+        'N' => 
+        array (
+            'Noodlehaus\\' => 11,
+        ),
         'I' => 
         array (
             'Interop\\Container\\' => 18,
@@ -37,6 +41,10 @@ class ComposerStaticInitff9eaf7fb84a23fc43fad608409bc9c9
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Noodlehaus\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hassankhan/config/src',
         ),
         'Interop\\Container\\' => 
         array (

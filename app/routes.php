@@ -1,5 +1,5 @@
 <?php
 
 $app->get('/home', function($request, $response, $args) {
-	echo 'foobar';
+	echo $this->config->get('db.mysql.host');
 });
