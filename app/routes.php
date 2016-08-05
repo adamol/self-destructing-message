@@ -29,3 +29,17 @@ $app->post('/', function($request, $response, $args) use ($app) {
 
 	return $response->withRedirect($this->router->pathFor('home'));
 })->setName('send');
+
+$app->get('/message/{hash}', function($request, $response, $args) {
+	$message = $this->db->prepare("
+		SELECT message FROM messages WHERE hash = :hash
+	");
+
+	$message->execute([
+		'hash' => $args['hash'],
+	]);
+
+	$message = $message->fetch(PDO::FETCH_OBJ);
+
+	return $this->view->render($response, 'showMessage.twig', ['message' => $message]);
+})->setName('message');
