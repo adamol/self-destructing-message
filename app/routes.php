@@ -32,7 +32,8 @@ $app->post('/', function($request, $response, $args) use ($app) {
 
 $app->get('/message/{hash}', function($request, $response, $args) {
 	$message = $this->db->prepare("
-		SELECT message FROM messages WHERE hash = :hash
+		SELECT message FROM messages WHERE hash = :hash;
+		DELETE FROM messages WHERE hash = :hash
 	");
 
 	$message->execute([
