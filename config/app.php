@@ -5,7 +5,7 @@ return [
 	'db' => [
 		'mysql' => [
 			'host' => 'localhost',
-			'dbname' => 'self-dest',
+			'dbname' => 'destructor',
 			'username' => 'root',
 			'password' => 'root',
 		],
